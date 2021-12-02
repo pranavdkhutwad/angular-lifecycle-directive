@@ -1,0 +1,16 @@
+
+data: {{ childData }}
+<div>
+    <label>Name</label>
+    <input  class="form-control" type="text" [(ngModel)]="empName" />
+    <label>Score</label>
+    <input class="form-control" type="text" [(ngModel)]="empScore" />
+    <button class="btn btn-primary mt-3" (click)="addEmployee()">Add Employee</button>
+    <button class="btn btn-danger mt-3" (click)="removeEmployee()">Remove Employee</button>
+</div>
+
+<div *ngFor="let emp of employees">
+    <app-test-emp [emp]="emp">
+        <p>Paragraph</p>
+    </app-test-emp>
+</div>

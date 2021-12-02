@@ -1,0 +1,14 @@
+<div class="container">
+<h1>{{ title }}</h1>
+
+<app-test-form (childEvent)="getChildData($event)" [childData]="parentVariable">
+  <input #contentInput type="text" class="form-control" />
+  <button class="btn btn-primary">Click Me!</button>
+</app-test-form>
+</div>
+
+<button (click)="toggleStatus()">Toggle Status</button>
+<p [ngClass]="getStatusValue()">This is my paragraph</p>
+<p [ngStyle]="myStyle">Style through ngStyle directive</p>
+
+<p appDomHighlight>Custom Directive</p>
